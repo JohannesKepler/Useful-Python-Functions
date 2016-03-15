@@ -1,6 +1,5 @@
-'''Given list of a roman numerals, find most efficient method
-    of writing number and calculate number of numerals
-    saved by doing so'''
+'''A function to convert from Roman to Arabic Numerals,
+    and another to convert back'''
 
 ROME = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
 ARABIA = [1, 5, 10, 50, 100, 500, 1000]
@@ -48,23 +47,22 @@ def get_roman(arabic_num):
     return roman_str
 
 def main():
-    # read in text file
-    romans = [line.strip() for line in open("p089_roman.txt", 'r')]
-
-    # convert from roman to arabic and back again,
-    # to get most efficient roman numeral
-    new_rome = []
-    for numeral in romans:
-        arab = get_arabic(numeral)
-        roman = get_roman(arab)
-        new_rome.append(roman)
-
-    # count differences in string length
-    difference = 0
-    for idx_rome in range(len(new_rome)):
-        difference += len(romans[idx_rome]) - len(new_rome[idx_rome])
-
-    print difference
+    which_way = raw_input("1. Roman -> Arabic\n2. Arabic -> Roman\n")
+    if which_way == "1":
+        r_to_a = raw_input("Please enter Roman numeral: ")
+        try:
+            print get_arabic(r_to_a)
+        except:
+            print "Try again, friend."
+    elif which_way == "2":
+        a_to_r = raw_input("Please enter Arabic numeral (integer): ")
+        try:
+            a_to_r = int(a_to_r)
+            print get_roman(a_to_r)
+        except:
+            print "Try a positive integer, friend."
+    else:
+        print "Try again, friend."
     
 if __name__ == "__main__":
     main()
