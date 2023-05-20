@@ -47,22 +47,22 @@ def get_roman(arabic_num):
     return roman_str
 
 def main():
-    which_way = raw_input("1. Roman -> Arabic\n2. Arabic -> Roman\n")
+    which_way = input("1. Roman -> Arabic\n2. Arabic -> Roman\n")
     if which_way == "1":
-        r_to_a = raw_input("Please enter Roman numeral: ")
+        r_to_a = input("Please enter Roman numeral: ")
         try:
-            print get_arabic(r_to_a)
+            print(get_arabic(r_to_a))
         except:
-            print "Try again, friend."
+            print("Try again, friend.")
     elif which_way == "2":
-        a_to_r = raw_input("Please enter Arabic numeral (integer): ")
+        a_to_r = input("Please enter Arabic numeral (integer): ")
         try:
             a_to_r = int(a_to_r)
-            print get_roman(a_to_r)
+            print(get_roman(a_to_r))
         except:
-            print "Try a positive integer, friend."
+            print("Try a positive integer, friend.")
     else:
-        print "Try again, friend."
+        print("Try again, friend.")
     
 if __name__ == "__main__":
     main()

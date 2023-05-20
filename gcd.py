@@ -10,8 +10,8 @@ def gcd(a, b):
         b, a = a, mod
         
 def main():
-    input1, input2 = raw_input("Input two numbers, separated by a space: ").split()
-    print gcd(int(input1), int(input2))
+    input1, input2 = input("Input two numbers, separated by a space: ").split()
+    print(gcd(int(input1), int(input2)))
     
 if __name__ == '__main__':
     main()

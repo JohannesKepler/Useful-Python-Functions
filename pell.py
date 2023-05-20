@@ -44,10 +44,10 @@ def pell(d, cont_frac_repr):
         return check_solution
 
 if __name__ == '__main__':
-    print "Pell equation: x^2 - D*y^2 = 1\n"
-    user_input_2 = int(raw_input("Input D to find fundamental solution for: "))
+    print("Pell equation: x^2 - D*y^2 = 1\n")
+    user_input_2 = int(input("Input D to find fundamental solution for: "))
     cont_frac_input = cont_frac(user_input_2)
     pell_solution = pell(user_input_2, cont_frac_input)
-    print "D = %d" % user_input_2
-    print "x = %d" % pell_solution[0]
-    print "y = %d" % pell_solution[1]
+    print("D = %d" % user_input_2)
+    print("x = %d" % pell_solution[0])
+    print("y = %d" % pell_solution[1])

@@ -9,8 +9,8 @@ def permutation_checker(a, b):
         return False
         
 def main():
-    input1, input2 = raw_input("Input two strings (or integers), separated by a space: ").split()
-    print permutation_checker(input1, input2)
+    input1, input2 = input("Input two strings (or integers), separated by a space: ").split()
+    print(permutation_checker(input1, input2))
     
 if __name__ == '__main__': 
      main()

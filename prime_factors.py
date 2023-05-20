@@ -42,11 +42,11 @@ def totient(n, prime_facts = None):
 def main():
     '''Asks for a number as input and displays the list of prime factors
     as well as the totient of the number.'''
-    print "Returns list of prime factors and phi(n)."
-    user_input = int(raw_input("Input number: "))
+    print("Returns list of prime factors and phi(n).")
+    user_input = int(input("Input number: "))
     result = prime_factors(user_input)
-    print result
-    print "Totient: %d" % totient(user_input, result)
+    print(result)
+    print("Totient: %d" % totient(user_input, result))
     
 if __name__ == '__main__':
     main()

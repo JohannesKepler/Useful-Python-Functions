@@ -39,9 +39,9 @@ def cont_frac(n):
     return a
 
 def main():
-    print "Returns continuous fraction for sqrt(n)"
-    user_input_2 = int(raw_input("Input n: "))
-    print cont_frac(user_input_2)
+    print("Returns continuous fraction for sqrt(n)")
+    user_input_2 = int(input("Input n: "))
+    print(cont_frac(user_input_2))
 
 
 if __name__ == '__main__':

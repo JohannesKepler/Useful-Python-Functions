@@ -7,7 +7,7 @@ def prime_sieve(limit):
         if isprime:
             yield i
             # Mark factors non-prime
-            for n in xrange(i, limit, i):
+            for n in range(i, limit, i):
                 a[n] = False
                 
 def composite_sieve(limit):
@@ -19,14 +19,14 @@ def composite_sieve(limit):
         if not iscomposite:
             yield i
             # Mark factors non-prime
-            for n in xrange(i, limit, i):
+            for n in range(i, limit, i):
                 a[n] = False
 
 def main():
     for prime in prime_sieve(100):
-        print prime
+        print(prime)
     for composite in composite_sieve(100):
-        print composite
+        print(composite)
 
 if __name__ == '__main__':
     main()
